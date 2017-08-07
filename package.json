@@ -1,0 +1,24 @@
+{
+  "name": "srdesignstudio",
+  "version": "1.0.0",
+  "description": "API to fetch customer and order data for Sonal Raval Design Studio ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravalsuraj/sr-designstudio.git"
+  },
+  "author": "Suraj Raval",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravalsuraj/sr-designstudio/issues"
+  },
+  "homepage": "https://github.com/ravalsuraj/sr-designstudio#readme",
+  "dependencies": {
+    "mongoose": "^4.11.6",
+    "nodemon": "^1.11.0"
+  }
+}
