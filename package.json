@@ -1,0 +1,27 @@
+{
+  "name": "srdesignstudio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "mongoose": "^4.11.6",
+    "nodemon": "^1.11.0",
+    "passport": "^0.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "start: \"nodemon server.js\"",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravalsuraj/sr-designstudio.git"
+  },
+  "author": "Suraj Raval",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravalsuraj/sr-designstudio/issues"
+  },
+  "homepage": "https://github.com/ravalsuraj/sr-designstudio#readme"
+}
