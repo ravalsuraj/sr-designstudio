@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var Account = require('./models/account');
 var Customer = require('./models/customer');
 var apiRouter = require('./routes/apiRouter');
-var apiController = require('./controllers/apiController');
+var crudControl = require('./controllers/crudControl');
 
 //Connect to the Database
 mongoose.connect('mongodb://localhost:27017/srdesignstudio');

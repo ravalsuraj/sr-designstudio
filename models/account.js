@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
+var uniqueValidator = require('mongoose-unique-validator');
 
 var AccountSchema = new mongoose.Schema({
 
@@ -95,4 +96,11 @@ AccountSchema.pre('save', function(callback) {
   })
 });
 
+AccountSchema.methods.verifyPassword = function(password, callback){
+  bcrypt.compare(password, this.password, function(err, isMatch){
+    if(err) return callback(err);
+    callback(null, isMatch);
+  });
+};
+AccountSchema.plugin(uniqueValidator);
 module.exports = mongoose.model('Accounts',AccountSchema);

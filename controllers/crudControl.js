@@ -8,7 +8,7 @@ exports.send_greeting = function(req, res){
   res.send({message:"Welcome to the Sonal Raval Design Studio API"});
 };
 
-exports.read_all_customers = function(req, res){
+exports.read_customers = function(req, res){
   Customer.find({},function(err,customer){
     if(err){
       res.send(err);
@@ -17,7 +17,7 @@ exports.read_all_customers = function(req, res){
   });
 };
 
-exports.create_a_customer = function(req, res){
+exports.create_customer = function(req, res){
   var new_customer = new customer(req.body);
   new_customer.save(function(err,customer){
     if(err){
@@ -28,7 +28,7 @@ exports.create_a_customer = function(req, res){
 
 };
 
-exports.read_a_customer = function(req, res){
+exports.read_customer = function(req, res){
   Customer.findById(req.params.customerId,function(err,customer){
     if(err){
       res.send(err);
@@ -38,14 +38,14 @@ exports.read_a_customer = function(req, res){
   });
 };
 
-exports.update_a_customer = function(req, res) {
+exports.update_customer = function(req, res) {
   Customer.findOneAndUpdate({_id: req.params.customerId}, req.body, {new: true}, function(err, customer) {
     if (err)
       res.send(err);
     res.json(Customer);
   });
 };
-exports.delete_a_customer = function(req, res) {
+exports.delete_customer = function(req, res) {
   Customer.remove({_id: req.params.customerId}, function(err, customer) {
     if (err)
       res.send(err);
@@ -55,16 +55,9 @@ exports.delete_a_customer = function(req, res) {
 
 /*********************************************
 **********************************************/
-exports.read_all_accounts = function(req, res){
-  Account.find({},function(err,account){
-    if(err){
-      res.send(err);
-    }
-    res.json(account);
-  });
-};
 
-exports.create_an_account = function(req, res){
+
+exports.create_account = function(req, res){
   var new_account = new Account(req.body);
   new_account.save(function(err,account){
     if(err){
@@ -75,7 +68,16 @@ exports.create_an_account = function(req, res){
 
 };
 
-exports.read_an_account = function(req, res){
+exports.read_accounts = function(req, res){
+  Account.find({},function(err,account){
+    if(err){
+      res.send(err);
+    }
+    res.json(account);
+  });
+};
+
+exports.read_account = function(req, res){
   Account.findById(req.params.accountId,function(err,account){
     if(err){
       res.send(err);
@@ -85,14 +87,15 @@ exports.read_an_account = function(req, res){
   });
 };
 
-exports.update_an_account = function(req, res) {
+exports.update_account = function(req, res) {
   Account.findOneAndUpdate({_id: req.params.accountId}, req.body, {new: true}, function(err, account) {
     if (err)
       res.send(err);
     res.json(account);
   });
 };
-exports.delete_an_account = function(req, res) {
+
+exports.delete_account = function(req, res) {
   Account.remove({_id: req.params.accountId}, function(err, account) {
     if (err)
       res.send(err);
