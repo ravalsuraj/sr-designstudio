@@ -39,7 +39,12 @@ exports.read_customer = function(req, res){
 };
 
 exports.update_customer = function(req, res) {
-  Customer.findOneAndUpdate({_id: req.params.customerId}, req.body, {new: true}, function(err, customer) {
+  Customer.findOneAndUpdate(
+    {
+      _id: req.params.customerId
+    },
+    req.body, {new: true},
+    function(err, customer) {
     if (err)
       res.send(err);
     res.json(Customer);
@@ -88,7 +93,8 @@ exports.read_account = function(req, res){
 };
 
 exports.update_account = function(req, res) {
-  Account.findOneAndUpdate({_id: req.params.accountId}, req.body, {new: true}, function(err, account) {
+  Account.findOneAndUpdate({_id: req.params.accountId}, req.body, {new: true},
+    function(err, account) {
     if (err)
       res.send(err);
     res.json(account);
@@ -99,6 +105,10 @@ exports.delete_account = function(req, res) {
   Account.remove({_id: req.params.accountId}, function(err, account) {
     if (err)
       res.send(err);
-    res.json({ message: 'account successfully deleted' });
+    res.json(
+      {
+        message: 'Account: '+ req.params.accountId + ' successfully deleted'
+      }
+    );
   });
 };

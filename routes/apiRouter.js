@@ -14,21 +14,21 @@ module.exports = function(app) {
   app.route('/api/accounts')
   .post(crudControl.create_account)
   //TODO: do not include get method in production API
-  .get(authControl.isAuthenticated, crudControl.read_accounts);
+  .get(authControl.isValidAccount, crudControl.read_accounts);
 
   app.route('/api/accounts/:accountId')
     //TODO: do not include get method in production API
-    .get(authControl.isAuthenticated, crudControl.read_account)
-    .put(authControl.isAuthenticated, crudControl.update_account)
-    .delete(authControl.isAuthenticated, crudControl.delete_account);
+    .get(authControl.isValidAccount, crudControl.read_account)
+    .put(authControl.isValidAccount, crudControl.update_account)
+    .delete(authControl.isValidAccount, crudControl.delete_account);
 
 //API Routes for Customers
   app.route('/api/customers')
-    .post(authControl.isAuthenticated, crudControl.create_customer)
-    .get(authControl.isAuthenticated, crudControl.read_customers);
+    .post(authControl.isValidAccount, crudControl.create_customer)
+    .get(authControl.isValidAccount, crudControl.read_customers);
 
   app.route('/api/customers/:customerId')
-    .get(authControl.isAuthenticated, crudControl.read_customer)
-    .put(authControl.isAuthenticated, crudControl.update_customer)
-    .delete(authControl.isAuthenticated, crudControl.delete_customer);
+    .get(authControl.isValidAccount, crudControl.read_customer)
+    .put(authControl.isValidAccount, crudControl.update_customer)
+    .delete(authControl.isValidAccount, crudControl.delete_customer);
 };

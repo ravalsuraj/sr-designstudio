@@ -4,7 +4,7 @@ var Account = require('../models/account');
 
 passport.use(new BasicStrategy(
   function(username, password, callback){
-    Account.findOne({username:username}, function(err,account){
+    Account.findOne({email:username}, function(err,account){
       if(err) return callback(err);
 
       //No existing user found with that username
