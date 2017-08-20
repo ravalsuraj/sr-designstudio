@@ -1,0 +1,244 @@
+doctype html
+
+-var text_aboutme = "Drop in our quaint and quirky store for traditional and western clothing. Our design aesthetic here, is a mix of modern and traditional. We make custom stitched clothing primarily for women, but also accept requests for kids and men."
+
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		title Sonal Raval Designs
+		meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0')
+		// Favicon ==================
+		// Standard
+		link(rel='shortcut icon', href='img/favicon-144.png')
+		// Retina iPad Touch Icon
+		link(rel='apple-touch-icon', sizes='144x144', href='img/favicon-144.png')
+		// Retina iPhone Touch Icon
+		link(rel='apple-touch-icon', sizes='114x114', href='img/favicon-114.png')
+		// Standard iPad Touch Icon
+		link(rel='apple-touch-icon', sizes='72x72', href='img/favicon-72.png')
+		// Standard iPhone Touch Icon
+		link(rel='apple-touch-icon', sizes='57x57', href='img/favicon-57.png')
+		
+		// Resources style ==================
+		
+		link(href='css/theme-SonalRaval.css', rel='stylesheet', type='text/css', media='all')
+		link(rel='stylesheet', href='css/style.min.css' type ='text/css')
+		link(rel="stylesheet" , href="https://fonts.googleapis.com/css?family=Six+Caps|Titillium+Web")
+		link(rel="stylesheet" , href="fonts/lie_to_me.otf")
+		script(src="https://use.fontawesome.com/870d8fb91b.js")
+	body
+		section.animsition
+			#leftSide
+				#home.gradient
+					// Your logo
+					.businesscard
+						.logo
+							h1#brand-name Sonal Raval
+							
+						.logo-expanded
+							h3#tagline pret . bespoke . couture
+							img#bowtie(src='img/bowtie.png')
+							img#mannequin(src='img/mannequin.png')
+							//.details
+								p#address 
+									|Sonal Raval Designs
+									br
+									|Siddhivinayak Bungalow
+									br
+									|Pratap Rao Gujar Road
+									br
+									|Neelam Nagar Phase 1
+									br
+									|Mulund East, Mumbai 400081
+								p#email Email: 
+									a(href='mailto:raval.sonal@gmail.com') raval.sonal@gmail.com 
+								p#phone Phone: +91 9833975307  
+							.social
+								i.fa.fa-facebook-official(aria-hidden="true")
+								i.fa.fa-google(aria-hidden="true")
+								i.fa.fa-instagram(aria-hidden="true")
+					.h-content
+
+			#rightSide
+				nav.top-nav.navbar.navbar-inverse
+					.container-fluid
+						ul.nav.navbar-nav
+							li.nav-item.left.active
+								a(href='#') Home
+							li.nav-item.left
+								a(href='#') The Store
+							li.nav-item.left
+								a(href='#') The Designer
+							li.nav-item.left
+								a(href='#') The Designs
+								
+							li.nav-item.right
+								a Log in
+							li.nav-item.right
+								a Sign up
+							#subscribe-result
+				//.top-nav
+					.container-fluid
+						ul
+							li
+								a(href='/') Home
+							li
+								a(href='/') The Store
+							li
+								a(href='/') The Designer
+							li.right
+								a(href='/') Login
+					form#subscribe-form(action='http://coderare.us12.list-manage.com/subscribe/post-json?u=112a29375b248b89f47be54b7&id=e46717ab68', method='get')
+							input.submit.input-submit(type='submit', name='login', value='Login')
+								input.submit.input-submit(type='submit', name='SignUp', value='SignUp')
+									#subscribe-result
+				.carousel.slide#myCarousel(data-ride="carousel")
+					ol.carousel-indicators
+						li.active(data-target='#myCarousel', data-slide-to='0')
+						li(data-target='#myCarousel', data-slide-to='1')
+						li(data-target='#myCarousel', data-slide-to='2')
+					// Wrapper for slides
+					.carousel-inner
+						.item.active
+							img(src='img/agency.png', alt='Los Angeles')
+						.item
+							img(src='img/wedding.png', alt='Chicago')
+						.item
+							img(src='img/event.png', alt='New York')
+					// Left and right controls
+					a.left.carousel-control(href='#myCarousel', data-slide='prev')
+						span.glyphicon.glyphicon-chevron-left
+						span.sr-only Previous
+					a.right.carousel-control(href='#myCarousel', data-slide='next')
+						span.glyphicon.glyphicon-chevron-right
+						span.sr-only Next
+
+				.appContainer
+					.jumbotron
+						.container.background-img-holder.overlay
+							img(src='img/sonalraval/store.jpg', alt='This is my work')
+							p #{text_aboutme}
+					
+				
+				#subscribe
+					h2 Stay tunned we're coming this year
+					#clock.mb100(data-date='2016/08/02 12:00:00')
+					form#subscribe-form(action='http://coderare.us12.list-manage.com/subscribe/post-json?u=112a29375b248b89f47be54b7&id=e46717ab68', method='get')
+						input.input-email(type='email', name='EMAIL', value='', placeholder='Email address *')
+						input.submit.input-submit(type='submit', name='subscribe', value='Subscribe')
+						#subscribe-result
+				.portfolio
+					ul.gallery
+						li.item.col-sm-4.col-xs-6
+							a(href='img/app1.jpg', title='App Shot 1')
+								figure
+									// Your picture
+									img.img-responsive(src='img/app1.jpg', alt='This is my work')
+									// Picture's description below this one
+									figcaption.caption
+										.photo-details
+											h4 App Shot 1
+											span By CodeRare
+						li.item.col-sm-4.col-xs-6
+							a(href='img/app2.jpg', title='App Shot 2')
+								figure
+									// Your picture
+									img.img-responsive(src='img/app2.jpg', alt='This is my work')
+									// Picture's description below this one
+									figcaption.caption
+										.photo-details
+											h4 App Shot 2
+											span By CodeRare
+						li.item.col-sm-4.col-xs-6
+							a(href='img/app3.jpg', title='App Shot 3')
+								figure
+									// Your picture
+									img.img-responsive(src='img/app3.jpg', alt='This is my work')
+									// Picture's description below this one
+									figcaption.caption
+										.photo-details
+											h4 App Shot 3
+											span By CodeRare
+						li.item.col-sm-4.col-xs-6
+							a(href='img/app4.jpg', title='App Shot 4')
+								figure
+									// Your picture
+									img.img-responsive(src='img/app4.jpg', alt='This is my work')
+									// Picture's description below this one
+									figcaption.caption
+										.photo-details
+											h4 App Shot 4
+											span By CodeRare
+						li.item.col-sm-4.col-xs-6
+							a(href='img/app5.jpg', title='App Shot 5')
+								figure
+									// Your picture
+									img.img-responsive(src='img/app5.jpg', alt='This is my work')
+									// Picture's description below this one
+									figcaption.caption
+										.photo-details
+											h4 App Shot 5
+											span By CodeRare
+						li.item.col-sm-4.col-xs-6
+							a(href='img/app6.jpg', title='App Shot 6')
+								figure
+									// Your picture
+									img.img.img-responsive(src='img/app6.jpg', alt='This is my work')
+									// Picture's description below this one
+									figcaption.caption
+										.photo-details
+											h4 App Shot 6
+											span By CodeRare
+				.twitter
+					i.ion-social-twitter
+					#twitterFeed.flexslider
+				#contact.row
+					h2
+						| Get in 
+						strong touch
+						| , we'd love to hear from you.
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					address.row
+						span.col-sm-6.col-xs-12
+							i.ion-location
+							|                     1355 Market Street, Suite 900
+							|                     San Francisco, CA 94103
+						span.col-sm-6.col-xs-12
+							i.ion-ios-telephone
+							|                     (123) 456-7890
+						span.col-sm-6.col-xs-12
+							i.ion-email
+							|                     hello@coderare.com
+					form#contact_form.row(method='post', action='php/mailer.php')
+						.col-sm-6.col-xs-12
+							input.input-name(type='name', name='name', placeholder='Name')
+							input.input-email(type='email', name='email', placeholder='Email')
+						.col-sm-6.col-xs-12
+							textarea.input-message(name='message', placeholder='Message')
+						.col-sm-12.col-xs-12
+							button.submit Send
+						#form-messages.col-sm-12.col-xs-12
+							span.success.col-sm-12.col-xs-12
+							span.error.col-sm-12.col-xs-12
+				footer
+					p.uppercase
+						| © Deft - Made With Love 
+						i.ion-heart
+					.drag
+						i.up.ion-arrow-up-c
+		script(src='js/jquery-1.11.3.min.js')
+		script(src='js/bootstrap.min.js')
+		script(src='js/animsition.min.js')
+		script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
+		script(src='js/jquery.magnific-popup.min.js')
+		script(src='js/jquery.countdown.min.js')
+		script(src='js/twitterFetcher_min.js')
+		script(src='js/masonry.pkgd.min.js')
+		script(src='js/imagesloaded.pkgd.min.js')
+		script(src='js/jquery.flexslider-min.js')
+		script(src='js/photoswipe.min.js')
+		script(src='js/photoswipe-ui-default.min.js')
+		script(src='js/jqinstapics.min.js')
+		script(src='js/script.js')
+		script(src='js/indexJS.js')

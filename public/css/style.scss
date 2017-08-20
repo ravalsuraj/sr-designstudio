@@ -1,0 +1,282 @@
+
+
+  $color-teal: #04373e;
+  $color-beige: #e5d8a0;
+  $blush-pink: #E89E6C;
+
+
+
+/*******************************************************
+*Set up and configuration and imports
+********************************************************/
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'LieToMe';
+  src: url('/fonts/lie_to_me.otf');
+}
+
+@font-face {
+  font-family: 'AliensCows';
+  src: url('/fonts/aliens_cows.ttf');
+}
+
+body {}
+
+
+/*******************************************************
+Overriding the theme file
+********************************************************/
+
+.appContainer {
+  width: 100%;
+  left: 0%;
+}
+
+#subscribe-form {
+  text-align: center;
+}
+
+
+/*******************************************************
+Adding Elements outside of the theme styling
+********************************************************/
+.temp-group{}
+
+.content-left {
+  width: 30%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.content-right {
+  width: 70%;
+  height: 100%;
+  background-color: #121212;
+}
+
+.logo {
+  margin-top: 0px;
+}
+
+.logo h1 {
+  color: $color-beige;
+  font-size: 3em;
+  font-family: 'LieToMe', cursive;
+}
+
+.businesscard {
+  /*
+	background: #04373e;
+	border: rgba(255, 255, 255, 0.5) solid 1px;
+	border-radius: 10px;
+	width:90%;
+	*/
+  margin: 10px auto;
+  text-align: center;
+  color: $color-beige;
+}
+
+h3#tagline {
+  margin-top: 15px;
+  font-family: 'AliensCows', sans-serif;
+  font-size: 1.2em;
+}
+
+.businesscard .details * {
+  line-height: 1;
+  font-size: 1em;
+  font-family: 'Titillium Web', sans-serif;
+  margin-bottom: 20px;
+}
+
+img#bowtie {
+  display: block;
+  height: 30px;
+  margin: 30px auto;
+}
+
+img#mannequin {
+  display: block;
+  height: 250px;
+  margin: auto;
+}
+
+#address {
+  color: $color-beige;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+#email a {
+  color: #E89E6C;
+}
+
+.social {
+  position: absolute;
+  top: 100px;
+  left:30%;
+  margin: 30px auto;
+  width: 75%;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#downarrow {
+  margin-top: px;
+  font-size: 1.5em;
+}
+
+.top-nav {
+  width: unset;
+  height: 100px;
+  color: #E89E6C;
+  background: #04373e;
+  border-radius: unset;
+  border: none;
+  -webkit-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.top-nav ul {
+  width: 100%;
+}
+
+.top-nav ul li.nav-item.left {
+  display: inline;
+  width: 15%;
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Six Caps';
+  -webkit-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.top-nav .nav-item{
+  cursor: pointer;
+}
+
+.top-nav ul li.nav-item.left.active {
+
+}
+
+.top-nav ul li.nav-item.left a{
+  cursor: pointer;
+  background: transparent;
+  //color: #E89E6C
+}
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+  position: fixed;
+    width: 100%;
+}
+
+.top-nav ul li.nav-item.left a:focus{
+  background: transparent;
+}
+
+.top-nav ul li.nav-item.left a:hover{
+  cursor: pointer;
+  background: transparent;
+  color: #fff
+}
+
+.top-nav ul li a:hover {
+  color: $color-beige;
+}
+
+li.nav-item.right {
+  padding: 0 30px;
+  margin: 10px 20px 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  font-family: 'Titillium Web';
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+  -webkit-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.nav-item.right a {
+
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding: 10px 0;
+}
+
+
+/***********************************
+    Reset Styles
+  ************************************/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+     v2.0 | 20110126
+     License: none (public domain)
+  */
+
+
+/*
+  Beige Text: e5d8a0
+  Dark Green:
+
+
+
+  */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

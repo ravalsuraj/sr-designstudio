@@ -1,0 +1,42 @@
+doctype html
+// views/login.pug
+html
+	head
+		title Node Authentication
+    link(rel="stylesheet" , href="https://fonts.googleapis.com/css?family=Six+Caps")
+		
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
+		
+		link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css')
+		
+    
+    
+    
+		style.
+			body        { padding-top:80px; }
+	body
+		.container
+			.col-sm-6.col-sm-offset-3
+				h1
+					span.fa.fa-sign-in
+					|  Login
+				//if message.length
+				//	.alert.alert-danger= message
+					
+				// LOGIN FORM
+				form(action='/login', method='post')
+					.form-group
+						label Email
+						input.form-control(type='text', name='email')
+					.form-group
+						label Password
+						input.form-control(type='password', name='password')
+					.btn-box
+						button.btn.btn-warning.btn-lg(type='submit') Login
+				p
+					| Need an account? 
+					a(href='/signup') Signup
+				p
+					| Or go 
+					a(href='/') home
+					| .
