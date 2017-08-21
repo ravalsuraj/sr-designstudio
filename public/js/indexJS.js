@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.logo-expanded').hide();
+  //$('.logo-expanded').hide();
 
   $('.logo').hover(
     function(){
