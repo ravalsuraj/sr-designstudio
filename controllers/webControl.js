@@ -2,7 +2,7 @@
 
 
 exports.get_index = function(req, res){
-  res.render('index.pug');
+  res.render('index_v2.pug');
 };
 
 

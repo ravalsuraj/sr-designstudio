@@ -51,11 +51,11 @@ html(lang='en')
 						ul.nav.navbar-nav.navbar-right
 							li
 								a(href='#')
-									span.glyphicon.glyphicon-user
+									//span.glyphicon.glyphicon-user
 									|	Sign Up
 							li
 								a(href='#')
-									span.glyphicon.glyphicon-log-in
+									//span.glyphicon.glyphicon-log-in
 									|  Login
 
 			//nav.top-nav.navbar.navbar-inverse
@@ -79,12 +79,12 @@ html(lang='en')
 							a Sign up
 
 
-			h1#brand-name Sonal Raval
-			.logo-expanded
+					
+			//.logo-expanded
 				h3#tagline pret . bespoke . couture
 				img#bowtie(src='img/bowtie.png')
 				img#mannequin(src='img/mannequin.png')
-				.details
+				//.details
 					p#address 
 						|Sonal Raval Designs
 						br
@@ -102,6 +102,7 @@ html(lang='en')
 					i.fa.fa-facebook-official(aria-hidden="true")
 					i.fa.fa-google(aria-hidden="true")
 					i.fa.fa-instagram(aria-hidden="true")
+			
 
 			.carousel.slide#myCarousel(data-ride="carousel")
 				ol.carousel-indicators
@@ -111,11 +112,22 @@ html(lang='en')
 				// Wrapper for slides
 				.carousel-inner
 					.item.active
-						img(src='img/agency.png', alt='Los Angeles')
+						//img(src='img/agency.png', alt='Los Angeles')
+						.bg-red
+							.bg-left 
+								h1 Example Text
+							.bg-right 
+								h1 Example Text
 					.item
-						img(src='img/wedding.png', alt='Chicago')
+						.bg-red
+							.bg-left
+							.bg-right
+						//img(src='img/wedding.png', alt='Chicago')
 					.item
-						img(src='img/event.png', alt='New York')
+						.bg-red
+							.bg-left
+							.bg-right
+						//img(src='img/event.png', alt='New York')
 				// Left and right controls
 				a.left.carousel-control(href='#myCarousel', data-slide='prev')
 					span.glyphicon.glyphicon-chevron-left
@@ -128,6 +140,7 @@ html(lang='en')
 			.jumbotron
 				.container.background-img-holder.overlay
 					img(src='img/sonalraval/store.jpg', alt='This is my work')
+					h1 The Store
 					p #{text_aboutme}
 			
 		

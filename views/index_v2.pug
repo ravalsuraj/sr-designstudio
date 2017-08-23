@@ -1,0 +1,136 @@
+doctype html
+
+-var text_aboutme = "Drop in our quaint and quirky store for traditional and western clothing. Our design aesthetic here, is a mix of modern and traditional. We make custom stitched clothing primarily for women, but also accept requests for kids and men."
+
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		title Sonal Raval Designs
+		meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0')
+		// Favicon ==================
+		// Standard
+		link(rel='shortcut icon', href='img/favicon-144.png')
+		// Retina iPad Touch Icon
+		link(rel='apple-touch-icon', sizes='144x144', href='img/favicon-144.png')
+		// Retina iPhone Touch Icon
+		link(rel='apple-touch-icon', sizes='114x114', href='img/favicon-114.png')
+		// Standard iPad Touch Icon
+		link(rel='apple-touch-icon', sizes='72x72', href='img/favicon-72.png')
+		// Standard iPhone Touch Icon
+		link(rel='apple-touch-icon', sizes='57x57', href='img/favicon-57.png')
+		
+		// Resources style ==================
+		
+		link(href='css/theme-SonalRaval.css', rel='stylesheet', type='text/css', media='all')
+		
+		link(rel="stylesheet" , href="https://fonts.googleapis.com/css?family=Six+Caps|Titillium+Web")
+		link(rel="stylesheet" , href="fonts/lie_to_me.otf")
+		link(rel='stylesheet', href='css/owl.carousel.min.css' type ='text/css')
+		link(rel='stylesheet', href='css/owl.theme.default.min.css' type ='text/css')
+		link(rel='stylesheet', href='css/style.min.css' type ='text/css')
+		script(src="https://use.fontawesome.com/870d8fb91b.js")
+	body
+		nav.top-nav.navbar.navbar-inverse
+			.container-fluid
+				.navbar-header
+					button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand#resp-logo(href='#') 
+						h1#brand-name Sonal Raval
+					
+				#myNavbar.collapse.navbar-collapse
+					ul.nav.navbar-nav
+						li.active
+							a(href='#', data-scroll="home") Home
+						li
+							a(href='#', data-scroll="outfits") The Outfits
+						li
+							a(href='#', data-scroll="store") The Store
+						li
+							a.navbar-brand#main-logo(href='#') 
+								h1#brand-name Sonal Raval
+						li
+							a(href='#', data-scroll="designer") The Designer
+						
+						li
+							a(href='#', data-scroll="contact") Get In Touch
+							
+						li
+							a(href='#', data-scroll="account") My Account
+							
+					//ul.nav.navbar-nav.navbar-right
+						li
+							a(href='#')
+								//span.glyphicon.glyphicon-user
+								|	Sign Up
+						li
+							a(href='#')
+								//span.glyphicon.glyphicon-log-in
+								|  Login
+		.wrapper
+			section.section-wrapper.scrollable#section1(data-anchor="home")
+				.carousel-frame
+					.owl-carousel.owl-theme
+						.item
+							img(src='img/agency.png', alt='Los Angeles')
+						.item
+							img(src='img/wedding.png', alt='Chicago')
+						.item
+							img(src='img/event.png', alt='New York')
+								
+			section.section-wrapper.scrollable.texture#section2(data-anchor="outfits")
+				.article
+				h1.headline Outfits
+				
+			section.section-wrapper.scrollable.texture#section3(data-anchor="store")
+				h1#brand-name Store
+			section.section-wrapper.scrollable.texture#section4(data-anchor="designer")
+			section.section-wrapper.scrollable.texture#section5(data-anchor="contact")
+			section.section-wrapper.scrollable.texture#section6(data-anchor="account")
+				
+				
+				//.carousel.slide#myCarousel(data-ride="carousel")
+					ol.carousel-indicators
+						li.active(data-target='#myCarousel', data-slide-to='0')
+						li(data-target='#myCarousel', data-slide-to='1')
+						li(data-target='#myCarousel', data-slide-to='2')
+					// Wrapper for slides
+					.carousel-inner
+						.item.active
+							img(src='img/agency.png', alt='Los Angeles')
+						.item
+							img(src='img/wedding.png', alt='Chicago')
+						.item
+							img(src='img/event.png', alt='New York')
+					// Left and right controls
+					a.left.carousel-control(href='#myCarousel', data-slide='prev')
+						span.glyphicon.glyphicon-chevron-left
+						span.sr-only Previous
+					a.right.carousel-control(href='#myCarousel', data-slide='next')
+						span.glyphicon.glyphicon-chevron-right
+						span.sr-only Next
+
+		
+
+		
+		script(src='js/jquery-1.11.3.min.js')
+		script(src='js/bootstrap.min.js')
+		script(src='js/animsition.min.js')
+		
+		script(src='js/jquery.magnific-popup.min.js')
+		script(src='js/jquery.countdown.min.js')
+		script(src='js/jquery.smooth-scroll.min.js')
+		script(src='js/masonry.pkgd.min.js')
+		script(src='js/imagesloaded.pkgd.min.js')
+		script(src='js/jquery.flexslider-min.js')
+		script(src='js/photoswipe.min.js')
+		script(src='js/photoswipe-ui-default.min.js')
+		script(src='js/jqinstapics.min.js')
+		script(src='js/owl.carousel.min.js')
+		
+		script(src='js/script.js')
+		script(src='js/indexJS.js')
+		
+		

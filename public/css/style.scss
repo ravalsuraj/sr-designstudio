@@ -1,51 +1,103 @@
-
-
-  $color-teal: #04373e;
-  $color-beige: #e5d8a0;
-  $blush-pink: #E89E6C;
-
-
-
 /*******************************************************
 *Set up and configuration and imports
 ********************************************************/
+
+$color-teal: #04373e;
+$color-beige: #e5d8a0;
+$blush-pink: #E89E6C;
 
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 @font-face {
-  font-family: 'LieToMe';
+  font-family: 'Logo';
   src: url('/fonts/lie_to_me.otf');
 }
-
 @font-face {
   font-family: 'AliensCows';
   src: url('/fonts/aliens_cows.ttf');
 }
 
-body {}
-
-
-/*******************************************************
-Overriding the theme file
-********************************************************/
-
-.appContainer {
-  width: 100%;
-  left: 0%;
+@font-face {
+  font-family: 'Retro';
+  src: url('/fonts/OldGateLaneNF.ttf');
 }
 
-#subscribe-form {
-  text-align: center;
+@font-face {
+  font-family: 'Casual';
+  src: url('/fonts/Ewert-Regular.ttf');
+}
+
+body {
+  background-image: url("../img/textures/vertical_cloth_blue.jpg");
+  background-position: top;
+  background-repeat: repeat;
+  position: relative;
 }
 
 
-/*******************************************************
-Adding Elements outside of the theme styling
-********************************************************/
-.temp-group{}
+
+// .................Section Styles .................................//
+.overlay:before {}
+
+.section-wrapper {
+  height: 100vh;
+  padding-top: 5vh;
+}
+
+.section-wrapper.filler {
+  width: 100vw;
+  background: white;
+}
+
+.section-wrapper.scrollable.texture {
+  height: 100vh;
+  position: relative;
+  background-size: initial;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-position: center;
+
+}
+
+.section-wrapper.fixed {
+  z-index: 2;
+}
+
+#section1 {
+  background-image: url("../img/textures/speck_blue.jpg");
+}
+
+#section2 {
+background-image: url("../img/textures/vertical_cloth_blue.jpg");
+}
+
+#section3 {
+  background-image: url("../img/textures/vertical_cloth_red.jpg");
+}
+
+#section4 {
+  background-image: url("../img/textures/zig_zag_wool_green.png");
+}
+
+#section5 {
+  background-image: url("../img/textures/zig_zag_wool_beige.png");
+}
+
+#section6 {
+  background-image: url("../img/textures/vertical_cloth_red.jpg");
+}
+
+//........................Test Styles....................................//
+
+h1.headline{
+  font-size: 10em;
+  font-family: 'Retro',cursive;
+  color: $color-beige;
+
+}
+
 
 .content-left {
   width: 30%;
@@ -60,15 +112,22 @@ Adding Elements outside of the theme styling
 }
 
 .logo {
-  margin-top: 0px;
+  margin-top: 0;
   cursor: pointer;
 }
 
-h1#brand-name  {
+#resp-logo{
+  display:none;
+}
+#main-logo{
+  display: unset;
+}
+
+h1#brand-name {
   padding: 5px;
   color: $color-beige;
   font-size: 2em;
-  font-family: 'LieToMe', cursive;
+  font-family: 'Logo', cursive;
 }
 
 h3#tagline {
@@ -107,25 +166,28 @@ img#mannequin {
 }
 
 .social {
-
-
-
   font-size: 1.5em;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-
+//..................Navbar Styles....................//
 .top-nav {
+  position: fixed;
+  top:0;
+  width: 100vw;
   margin: auto;
-  padding-bottom: 10px;
-  color: #E89E6C;
-  background: #04373e;
+  padding: 0 0 10px;
+  z-index: 2;
+
+  color: #f2f7f2;
+  background: url("../img/textures/horizontal_cloth_blue.jpg") top center;
+
   border-radius: 0;
   border-left: none;
   border-right: none;
   border-top: none;
-
+  border-bottom: dashed 1px $color-beige;
 
   -webkit-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -134,11 +196,17 @@ img#mannequin {
   transition: 0.3s;
 }
 
+.top-nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
 
-.top-nav ul li{
+.top-nav ul li {
   font-size: 2em;
   font-family: 'Six Caps';
   cursor: pointer;
+  text-align: center;
   -webkit-transition: 0.2s;
   -ms-transition: 0.2s;
   -moz-transition: 0.2s;
@@ -146,41 +214,75 @@ img#mannequin {
   transition: 0.2s;
 }
 
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
-  color:$color-beige;
-background: none;
+.top-nav ul li a span {
+  margin-right: 10px;
 }
 
-.navbar-inverse .navbar-toggle{
-border: none;
+.carousel-frame {
+  margin-top: 10vh;
 }
-.navbar-inverse .navbar-toggle:focus,.navbar-inverse .navbar-toggle:hover{
+
+.owl-item.active.center {
+  border: solid 1vw rgba(4, 55, 62, 1);
+  box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
+}
+
+/*******************************************************
+Overriding the theme file
+********************************************************/
+.appContainer {
+  height: 100vh;
+  //width: 100%;
+  left: 0;
+}
+
+#subscribe-form {
+  text-align: center;
+}
+/*******************************************************
+Overriding Bootstrap styles
+********************************************************/
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+  color: $color-beige;
+  background: none;
+}
+
+.navbar-inverse .navbar-toggle {
+  border: none;
+}
+
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
   color: $color-beige;
 }
 
-.top-nav ul li a span{
-  margin-right: 10px;
+.navbar-inverse .navbar-nav > li > a {
+  color: unset;
 }
-.right{
-  float: right;
+/*******************************************************
+Adding Elements outside of the theme styling
+********************************************************/
+@media only screen and (min-width: 2000px) {}
+@media only screen and (min-width: 2500px) {}
+@media only screen and (max-width: 1600px) {}
+@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 768px) {
+#resp-logo{
+  display:unset;
+}
+#main-logo{
+  display: none;
 }
 
+  .top-nav ul {
+    width: initial;
+    display: initial;
+    justify-content: space-around;
+  }
 
-/***********************************
-    Reset Styles
-  ************************************/
-
-
-/* http://meyerweb.com/eric/tools/css/reset/
-     v2.0 | 20110126
-     License: none (public domain)
-  */
-
-
-/*
-  Beige Text: e5d8a0
-  Dark Green:
-
-
-
-  */
+}
+@media screen and (max-device-width: 740px) and (orientation: landscape) {}
+@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 320px) {}
