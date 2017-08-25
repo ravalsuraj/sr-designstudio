@@ -1,103 +1,147 @@
 /*******************************************************
 *Set up and configuration and imports
 ********************************************************/
-
 $color-teal: #04373e;
 $color-beige: #e5d8a0;
-$blush-pink: #E89E6C;
+$color-blush-pink: #E89E6C;
+$color-army-green: #618448;
+/* RGB */
+$color-teal: rgba(4, 55, 62, 1);
+$color-tuscan: rgba(229, 216, 160, 1);
+$color-quartz: rgba(73, 71, 91, 1);
+$color-sugarplum: rgba(142, 85, 114, 1);
+$color-antiflash: rgba(242, 247, 242, 1);
 
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 @font-face {
-  font-family: 'Logo';
+  font-family: 'Curly_1';
   src: url('/fonts/lie_to_me.otf');
 }
+
+@font-face {
+  font-family: 'Curly_2';
+  src: url('/fonts/Angeline Vintage_Demo.otf');
+}
+
 @font-face {
   font-family: 'AliensCows';
   src: url('/fonts/aliens_cows.ttf');
 }
-
 @font-face {
   font-family: 'Retro';
   src: url('/fonts/OldGateLaneNF.ttf');
 }
-
 @font-face {
   font-family: 'Casual';
   src: url('/fonts/Ewert-Regular.ttf');
 }
-
+/*
 body {
   background-image: url("../img/textures/vertical_cloth_blue.jpg");
   background-position: top;
   background-repeat: repeat;
   position: relative;
 }
+*/
+/*******************************************************
+* Typography
+********************************************************/
+h1.brand-name {
+  padding: 5px;
+  color: $color-beige;
+  font-size: 1.5em;
+  font-family: 'Curly_1', cursive;
+}
 
+h3#tagline {
+  margin-top: 15px;
+  font-size: 1.2em;
+  font-family: 'AliensCows', sans-serif;
+}
 
+h1.headline {
+  font-size: 10em;
+  font-family: 'Curly_2',cursive;
+  text-align: center;
+  position:relative;
+  top:-0.5em;
 
-// .................Section Styles .................................//
+}
+
+.top-nav ul li a{
+  font-size: 2em;
+  font-family: 'Six Caps';
+  text-align: center;
+}
+
+#address {
+  margin-top: 20px;
+  line-height: 1.6;
+  color: $color-beige;
+}
+
+#email a {
+  color: #E89E6C;
+}
+
+/*******************************************************
+* Page Layout
+********************************************************/
+
 .overlay:before {}
 
 .section-wrapper {
   height: 100vh;
+  min-height: 600px;
   padding-top: 5vh;
 }
 
-.section-wrapper.filler {
-  width: 100vw;
-  background: white;
-}
-
-.section-wrapper.scrollable.texture {
-  height: 100vh;
+/*.section-wrapper.scrollable.texture {
   position: relative;
   background-size: initial;
   background-attachment: fixed;
   background-repeat: repeat;
   background-position: center;
-
-}
-
-.section-wrapper.fixed {
-  z-index: 2;
-}
-
+}*/
 #section1 {
   background-image: url("../img/textures/speck_blue.jpg");
 }
 
 #section2 {
-background-image: url("../img/textures/vertical_cloth_blue.jpg");
+  background-image: url("../img/textures/vertical_cloth_2.png");
+    color: $color-tuscan;
 }
 
-#section3 {
+#section6 {
   background-image: url("../img/textures/vertical_cloth_red.jpg");
+  color: $color-army-green;
 }
 
 #section4 {
   background-image: url("../img/textures/zig_zag_wool_green.png");
+  color: $color-teal;
 }
 
 #section5 {
   background-image: url("../img/textures/zig_zag_wool_beige.png");
 }
 
-#section6 {
-  background-image: url("../img/textures/vertical_cloth_red.jpg");
+#section3 {
+  background-image: url("../img/textures/speck.jpg");
 }
+/*******************************************************
+*
+********************************************************/
 
-//........................Test Styles....................................//
-
-h1.headline{
-  font-size: 10em;
-  font-family: 'Retro',cursive;
-  color: $color-beige;
-
+.social {
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-
 
 .content-left {
   width: 30%;
@@ -116,24 +160,12 @@ h1.headline{
   cursor: pointer;
 }
 
-#resp-logo{
-  display:none;
+#resp-logo {
+  display: none;
 }
-#main-logo{
+
+#main-logo {
   display: unset;
-}
-
-h1#brand-name {
-  padding: 5px;
-  color: $color-beige;
-  font-size: 2em;
-  font-family: 'Logo', cursive;
-}
-
-h3#tagline {
-  margin-top: 15px;
-  font-family: 'AliensCows', sans-serif;
-  font-size: 1.2em;
 }
 
 .businesscard .details * {
@@ -154,41 +186,22 @@ img#mannequin {
   height: 250px;
   margin: auto;
 }
-
-#address {
-  color: $color-beige;
-  margin-top: 20px;
-  line-height: 1.6;
-}
-
-#email a {
-  color: #E89E6C;
-}
-
-.social {
-  font-size: 1.5em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
 //..................Navbar Styles....................//
+
 .top-nav {
   position: fixed;
-  top:0;
+  top: 0;
   width: 100vw;
   margin: auto;
   padding: 0 0 10px;
   z-index: 2;
-
   color: #f2f7f2;
   background: url("../img/textures/horizontal_cloth_blue.jpg") top center;
-
   border-radius: 0;
   border-left: none;
   border-right: none;
   border-top: none;
   border-bottom: dashed 1px $color-beige;
-
   -webkit-transition: 0.3s;
   -ms-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -203,10 +216,7 @@ img#mannequin {
 }
 
 .top-nav ul li {
-  font-size: 2em;
-  font-family: 'Six Caps';
   cursor: pointer;
-  text-align: center;
   -webkit-transition: 0.2s;
   -ms-transition: 0.2s;
   -moz-transition: 0.2s;
@@ -226,7 +236,6 @@ img#mannequin {
   border: solid 1vw rgba(4, 55, 62, 1);
   box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
 }
-
 /*******************************************************
 Overriding the theme file
 ********************************************************/
@@ -242,11 +251,18 @@ Overriding the theme file
 /*******************************************************
 Overriding Bootstrap styles
 ********************************************************/
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+  color: $color-sugarplum;
+  background: none;
+
+}
+
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:focus,
 .navbar-inverse .navbar-nav > .active > a:hover {
   color: $color-beige;
   background: none;
+  text-decoration: overline;
 }
 
 .navbar-inverse .navbar-toggle {
@@ -267,14 +283,23 @@ Adding Elements outside of the theme styling
 @media only screen and (min-width: 2000px) {}
 @media only screen and (min-width: 2500px) {}
 @media only screen and (max-width: 1600px) {}
-@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 1024px) {
+  .top-nav ul li a{
+    font-size: 1.5em;
+  }
+}
 @media only screen and (max-width: 768px) {
-#resp-logo{
-  display:unset;
-}
-#main-logo{
-  display: none;
-}
+  .carousel-frame {
+    margin-top: 65px;
+  }
+
+  #resp-logo {
+    display: unset;
+  }
+
+  #main-logo {
+    display: none;
+  }
 
   .top-nav ul {
     width: initial;
@@ -282,6 +307,9 @@ Adding Elements outside of the theme styling
     justify-content: space-around;
   }
 
+  h1.headline {
+    font-size: 2.5em;
+  }
 }
 @media screen and (max-device-width: 740px) and (orientation: landscape) {}
 @media only screen and (max-width: 480px) {}
